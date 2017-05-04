@@ -10,6 +10,10 @@ defmodule BootlegTest.Application do
 
     # Define workers and child supervisors to be supervised
     children = [
+      worker(Task, [fn -> 
+        BootlegTest.hello() 
+        System.halt(0)
+      end])
       # Starts a worker by calling: BootlegTest.Worker.start_link(arg1, arg2, arg3)
       # worker(BootlegTest.Worker, [arg1, arg2, arg3]),
     ]
