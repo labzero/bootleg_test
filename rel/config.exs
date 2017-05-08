@@ -38,7 +38,7 @@ end
 # when running `mix release`, the first release in the file
 # will be used by default
 
-release :bootleg_test do
+release :test_app do
   set version: current_version(:bootleg_test)
   set applications: [
     :runtime_tools

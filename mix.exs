@@ -31,8 +31,8 @@ defmodule BootlegTest.Mixfile do
   defp deps do
     [
       {:distillery, "~> 1.0"},
-      #{:bootleg, path: "../bootleg"}
-      {:bootleg, git: "git@github.com:labzero/bootleg.git"}
+      {:bootleg, path: "/bootleg"}
+      #{:bootleg, git: "git@github.com:labzero/bootleg.git"}
     ]
   end
 end

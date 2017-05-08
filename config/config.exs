@@ -6,20 +6,20 @@ use Mix.Config
 # and its dependencies with the aid of the Mix.Config module.
 use Mix.Config
 
-config :bootleg, app: "bootleg_test"
+config :bootleg, app: "test_app"
 config :bootleg, build:
   [
-    app: "bootleg_test",
+    app: "test_app",
     revision: "HEAD",
     host: "ec2-54-202-189-109.us-west-2.compute.amazonaws.com",
     user: "ubuntu",
-    workspace: "/tmp/bootleg_test/svoynow/build",
+    workspace: "/tmp/test_app/svoynow/build",
     identity: "/Users/sashavoynow/.ssh/jenkins-ecs.pem",
     strategy: Bootleg.Strategies.Build.RemoteSSH
   ]
 config :bootleg, deploy:
   [
-    app: "bootleg_test",
+    app: "test_app",
     host: "ec2-54-202-189-109.us-west-2.compute.amazonaws.com",
     user: "ubuntu",
     deploy_to: "/home/test_app/bootleg_test/bootleg",
@@ -28,8 +28,8 @@ config :bootleg, deploy:
   ]
 config :bootleg, archive:
   [
-    app: "bootleg_test",
-    archive_directory: "/Users/sashavoynow/Downloads",
+    app: "test_app",
+    archive_directory: "/downloads",
     max_archives: 2
   ]
 #     import_config "#{Mix.env}.exs"
